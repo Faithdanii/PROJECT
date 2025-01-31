@@ -1,0 +1,275 @@
+body {
+    margin: 100px;
+    background-color: rgb(194, 135, 181);
+    background-origin: padding-box;
+    
+    
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    z-index: 1000;
+
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-actions {
+    display: flex;
+}
+
+.nav-actions button {
+    background-color: #552424;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.nav-actions button:hover {
+    background-color: #777;
+}
+
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        background-color: #555;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+
+.nav-toggle {
+    display: none;
+}
+
+
+.nav-toggle span {
+    font-size: 1.5rem;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-content p {
+    font-size: 17px;
+    font-family: 'Times-Roman', sans-serif;
+    line-height: 2.0;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.right-content img {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    border: 1px solid beige;
+    border-radius: 40px;
+    padding-right: 8px;
+}
+
+/* Hero Section */
+#Hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Hero .View {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 12px;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 50%;
+}
+
+#search-engine {
+    padding: 10px;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 300px;
+}
+
+#house select,
+#location-select {
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    width: 100px;
+}
+
+#search-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    background-color: #060e7b;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #3e8e41;
+}
+
+
+@media (max-width: 768px) {
+    #Hero .View {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .left-content {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .left-content p {
+        font-size: 18px;
+        text-align: left;
+        line-height: 1.6;
+    }
+
+    .search-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    #search-engine {
+        width: 100%;
+    }
+
+    #house-select,
+    #location-select {
+        width: 100%;
+    }
+
+    #search-btn {
+        width: 100%;
+    }
+
+    .right-content img {
+        width: 90%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+.house option {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0px;
+}
+
+.house img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid beige;
+    border-radius: 40px
+}
+
+
+#portfolio {
+    padding: 40px; /* Add padding to the portfolio section */
+    text-align: center; /* Center the text in the section */
+}
+
+.our-options {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+.our-options img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+    border-radius: 8px; /* Optional: rounded corners for images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow for depth */
+}
+
+/* Responsive styles for images */
+@media (max-width: 768px) {
+    .our-options img {
+        max-width: 90%; /* Full width for mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .our-options img {
+        max-width: 45%; /* Limit width for laptops */
+    }
+}
